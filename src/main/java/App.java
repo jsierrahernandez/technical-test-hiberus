@@ -6,15 +6,19 @@ import sql.Client;
 
 import java.util.Scanner;
 
+/**
+ * Main class of the application. It allows the user to choose between running a query with Spark Sql or running the ETL.
+ * The user can also exit the application.
+ */
 public class App {
     private static final Logger logger = Logger.getLogger(App.class);
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        int option = 1;
+        int option = 0; //option 0 is a default value to enter the loop
 
-        while(option == 1 || option == 2 || option == 3) {
+        while(option == 0 || option == 1 || option == 2 || option == 3) {
             logger.info("Please choose an option (1, 2 or 3). Other values will be ignored.");
             logger.info("1) Run your own query with Spark Sql");
             logger.info("2) Run ETL");
@@ -23,7 +27,7 @@ public class App {
             try {
                 option = Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
-                logger.info("Invalid input. Please enter 1, 2 or 3.");
+                option = 0;
             }
 
             if (option == 1) {
@@ -50,7 +54,7 @@ public class App {
             }
             else {
                 logger.info("Invalid input. Please enter 1, 2 or 3.");
-                option = 1;
+                option = 0;
             }
 
         }

@@ -8,7 +8,9 @@ import org.apache.spark.sql.SparkSession;
 
 import java.util.List;
 
-
+/**
+ * This class contains the ETL process.
+ */
 public class Etl {
     private static final Logger logger = Logger.getLogger(Etl.class);
 

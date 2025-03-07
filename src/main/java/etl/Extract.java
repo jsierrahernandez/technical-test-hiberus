@@ -7,6 +7,9 @@ import org.apache.spark.sql.SparkSession;
 
 import java.io.File;
 
+/**
+ * This class contains the extraction logic for the ETL process.
+ */
 public class Extract {
 
     private static String inputPath = "src/main/resources/data/input/";
@@ -25,6 +28,7 @@ public class Extract {
                     .option("inferSchema", "true")
                     .load(filePath);
         } catch (Exception e) {
+            logger.error("Extracting data error: " + filePath, e);
             return null;
         }
     }

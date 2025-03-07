@@ -8,6 +8,9 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 
+/**
+ * Class that runs a query with Spark Sql.
+ */
 public class Client {
     private static final Logger logger = Logger.getLogger(Client.class);
 

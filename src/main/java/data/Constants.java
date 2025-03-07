@@ -29,4 +29,11 @@ public class Constants {
     public static final String MAX_BALANCE = "max_balance";
     public static final String MIN_BALANCE = "min_balance";
 
+    //Table constants
+    public static final String TABLE_0 = "age_range_where_most_contract_loan";
+    public static final String TABLE_1 = "age_range_and_marital_status_with_more_Money";
+    public static final String TABLE_2 = "most_common_way_of_contracting_clients_25_to_35_years";
+    public static final String TABLE_3 = "average_maximum_and_minimum_balance_by_campaign_and_material_status_and_profession";
+    public static final String TABLE_4 = "most_common_type_of_job";
+
 }

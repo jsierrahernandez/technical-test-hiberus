@@ -11,6 +11,9 @@ import java.util.List;
 import static data.Constants.*;
 import static org.apache.spark.sql.functions.col;
 
+/**
+ * This class contains the transformation logic for the ETL process.
+ */
 public class Transform {
     private static final Logger logger = Logger.getLogger(Transform.class);
 
